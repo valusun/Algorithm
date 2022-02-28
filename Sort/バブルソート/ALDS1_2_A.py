@@ -13,6 +13,6 @@ for i in range(N-1):
             A[j],A[j+1] = A[j+1],A[j]
             Ans+=1
 
-# ----- 入力 ----- #
+# ----- 出力 ----- #
 print(*A)
 print(Ans)

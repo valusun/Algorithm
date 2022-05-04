@@ -19,3 +19,9 @@ https://kyopro-friends.hatenablog.com/entry/2019/01/12/230754
 
 - E
 ナップサックdp
+
+- F
+最長共通部分列(LCS)
+
+- G
+トポロジカルソートの知識必要

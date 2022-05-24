@@ -1,35 +1,40 @@
-# https://atcoder.jp/contests/typical90/tasks/typical90_b
+def CheckParentheses(parentheses: str) -> bool:
+    """正しいカッコ列かチェックする
 
-# ----- 入力 ----- #
-N = int(input())
+    Args:
+        parentheses (str): カッコ列
 
-ans = []
+    Returns:
+        bool : 正しいカッコ列のときTrue
+    """
 
-# ----- bit全探索 ----- #
-for i in range(2**N):
-    # 作成したカッコ列を格納
-    tmp = ""
-    for j in range(N):
-        # 1ならば'('を追加する
-        if i&(1<<j):
-            tmp+='('
+    length = len(parentheses)
+    left_cnt, right_cnt = 0, 0
+    for p in parentheses:
+        if p == "(":
+            left_cnt += 1
         else:
-            tmp+=')'
-    
-    # 作成したカッコ列が正しいか判定
-    left, right = 0,0
-    for s in tmp:
-        if s=='(':
-            left+=1
-            if left>N//2:
-                break
-        if s==')':
-            right+=1
-            if left < right:
-                break
-    else:
-        ans.append(tmp)
+            right_cnt += 1
+        if left_cnt > length // 2 or left_cnt < right_cnt:
+            return False
+    return True
 
-# ----- カッコ列を並び替えて出力 ----- #
-ans.sort()
-print(*ans, sep="\n")
+
+def main():
+    N = int(input())
+    ans = []
+    for i in range(2**N):
+        tmp = ""
+        for j in range(N):
+            if i & (1 << j):
+                tmp += "("
+            else:
+                tmp += ")"
+        if CheckParentheses(tmp):
+            ans.append(tmp)
+    ans.sort()
+    print(*ans, sep="\n")
+
+
+if __name__ == "__main__":
+    main()

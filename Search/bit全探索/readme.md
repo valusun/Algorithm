@@ -1,0 +1,2 @@
+- [ALDS1_5_A](https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_5_A&lang=ja)
+- [typical_002](https://atcoder.jp/contests/typical90/tasks/typical90_b)

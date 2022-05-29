@@ -1,0 +1,1 @@
+[Typical_F.py](https://atcoder.jp/contests/typical-algorithm/tasks/typical_algorithm_f)

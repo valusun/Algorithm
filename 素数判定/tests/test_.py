@@ -14,7 +14,7 @@ from .. import prime, primes
         (998244353, True),
     ],
 )
-def test_prime(args, result, _primes):
+def test_prime(args, result):
     assert prime.is_prime(args) == result
 
 
